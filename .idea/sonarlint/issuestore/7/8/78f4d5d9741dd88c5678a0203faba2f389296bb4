@@ -1,0 +1,13 @@
+
+h	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(ªÌ…Ÿşÿÿÿÿ8¹Æ°´­3
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ªÌ…Ÿşÿÿÿÿ8«÷±´­3
+
+java:S1192b"_Define a constant instead of duplicating this literal "call not found by the given id" 4 times.(²à´ÿÿÿÿÿ8¾Æ°´­3
+m
+java:S3655F"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(µò¬†8Ğù±´­3
+n
+java:S3655Ÿ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(µò¬†8ÜÊ°´­3
+p
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8üù±´­3
+p
+java:S6204™"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ú±´­3

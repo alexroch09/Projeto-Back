@@ -1,0 +1,10 @@
+
+T	java:S106("9Replace this use of System.out or System.err by a logger.(«Ö§8™µë±­3
+U	java:S1062"9Replace this use of System.out or System.err by a logger.(¸’ì´8µë±­3
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(çÑËî8Ÿµë±­3
+Z	java:S106;"9Replace this use of System.out or System.err by a logger.(”ıáØüÿÿÿÿ8£µë±­3
+U	java:S106="9Replace this use of System.out or System.err by a logger.(šø¬Á8£µë±­3
+@
+java:S1128"Remove this duplicated import.(à¸‚Öıÿÿÿÿ8¤µë±­3
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8¤µë±­3

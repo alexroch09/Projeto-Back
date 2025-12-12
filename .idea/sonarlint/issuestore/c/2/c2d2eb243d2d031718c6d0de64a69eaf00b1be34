@@ -1,0 +1,11 @@
+
+c
+java:S1192#"FDefine a constant instead of duplicating this literal "ADMIN" 7 times.(Öâª¢8•ş’¬3
+|
+java:S3305"ZInject this field value directly into "securityFilterChain", the only method that uses it.(ÃîÑıÿÿÿÿ8œş’¬3
+T
+java:S1611"2Remove the parentheses around the "csrf" parameter(ª»Çşÿÿÿÿ8ş’¬3
+W
+java:S1611"5Remove the parentheses around the "session" parameter(Î‹Öëıÿÿÿÿ8Ÿş’¬3
+O
+java:S1611"2Remove the parentheses around the "auth" parameter(ò‚öí8Ÿş’¬3

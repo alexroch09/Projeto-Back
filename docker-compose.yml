@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+
+  app:
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: infrareport-back-end
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads  # Persistência local das imagens
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://mariadb:3306/infrareport?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=infrareport
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL5Dialect
+      - SPRING_JPA_HIBERNATE_NAMING_STRATEGY=org.hibernate.cfg.ImprovedNamingStrategy
+      - INFRAREPORT_UPLOAD_DIR=/app/uploads  # Caminho usado no código para salvar arquivos localmente
+
+
+  mariadb:
+    image: "mariadb:10.6"
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      #
+      - MARIADB_DATABASE=infrareport
+      - MARIADB_USER=infrareport
+      - MARIADB_PASSWORD=password
+      #
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "--password=password"]
+      timeout: 20s
+      retries: 10
+    volumes:
+    - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
